@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Free tax guide for small business owners from The Tax Files.">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Tax Files</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: single-column lead-magnet page. Hero splits copy and a tall portrait; a ruled "file index" list sits between about and the closing call to action. */
+:root{
+  --bg:#F2F3F4; --surface:#FFFFFF; --ink:#1B2226; --muted:#56636A; --line:#D3D9DC;
+  --accent:#A8267F; --on-accent:#FFFFFF; --band:#1B2226; --on-band:#ECEFF0; --band-muted:#A9B5BA; --logo-filter:none;
+  --f-display:"Familjen Grotesk","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12171A; --surface:#1B2226; --ink:#ECEFF0; --muted:#9AA7AD; --line:#2C373C;
+  --accent:#E479C1; --on-accent:#12171A; --band:#0B0F11; --on-band:#ECEFF0; --band-muted:#9AA7AD; --logo-filter:invert(1); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12171A; --surface:#1B2226; --ink:#ECEFF0; --muted:#9AA7AD; --line:#2C373C;
+  --accent:#E479C1; --on-accent:#12171A; --band:#0B0F11; --on-band:#ECEFF0; --band-muted:#9AA7AD; --logo-filter:invert(1); color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--f-body);padding-inline:20px;padding-block:0}
+.wrap{max-width:1120px;margin-inline:auto}
+img{display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+header.top{flex-wrap:wrap;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;font:700 19px/1 var(--f-display);letter-spacing:.02em;text-transform:uppercase}
+.avatar{width:42px;height:42px;border-radius:50%;object-fit:cover;object-position:50% 22%;border:2px solid var(--accent)}
+.logo{width:40px;height:40px;object-fit:contain;filter:var(--logo-filter)}
+footer .logo{width:32px;height:32px}
+.faces{display:flex;align-items:center;gap:10px;margin-top:24px}
+.faces img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid var(--accent)}
+.faces img+img{margin-left:-22px;box-shadow:-3px 0 0 var(--bg)}
+a.brand{text-decoration:none;color:inherit}
+button.status{appearance:none;background:none;border:0;cursor:pointer;padding:8px 0}
+button.status:hover{color:var(--accent)}
+.status{font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:8px}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+
+.btn{appearance:none;border:0;cursor:pointer;background:var(--accent);color:var(--on-accent);font:600 17px/1 var(--f-body);padding:18px 28px;border-radius:6px;display:inline-flex;align-items:center;gap:10px;transition:transform .15s ease,filter .15s ease}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn:active{transform:none}
+.btn[disabled]{opacity:.6;cursor:default}
+
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center;padding-block:56px 64px}
+.eyebrow{font:500 13px/1.4 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:0 0 20px}
+h1{font:700 clamp(2.6rem,6.4vw,5rem)/.98 var(--f-display);letter-spacing:-.01em;text-transform:uppercase;margin:0 0 20px;text-wrap:balance}
+.sub{font:500 clamp(1.2rem,2.2vw,1.6rem)/1.3 var(--f-display);margin:0 0 28px;max-width:40ch;text-wrap:balance}
+.hero p.bio{color:var(--muted);max-width:56ch;margin:0 0 32px}
+.hero p.bio strong{color:var(--ink);font-weight:600}
+
+.portrait{position:relative;margin:0}
+.portrait img.main{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:6px}
+.mosaic{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.mosaic img{width:100%;height:100%;min-height:0;object-fit:cover;border-radius:6px;display:block}
+.mosaic .m1{grid-column:1/4;aspect-ratio:4/3}
+.mosaic .m2{grid-column:4/6;aspect-ratio:1/1.1;object-position:50% 40%}
+.mosaic .m3{grid-column:1/3;aspect-ratio:1/1.1}
+.mosaic .m4{grid-column:3/6;aspect-ratio:4/3}
+.stamp{position:absolute;left:-14px;bottom:28px;background:var(--surface);border:1px solid var(--line);padding:12px 16px;font:500 12px/1.5 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,.14)}
+.stamp b{display:block;color:var(--accent);font-weight:500}
+
+.about{display:grid;grid-template-columns:minmax(0,.6fr) minmax(0,1.4fr);gap:56px;align-items:center;padding-block:56px;border-top:1px solid var(--line)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start;max-width:360px}
+.duo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:6px}
+.duo img:nth-child(2){margin-top:36px;object-position:50% 25%}
+h2{font:700 clamp(1.8rem,3.6vw,2.7rem)/1.08 var(--f-display);margin:0 0 18px;text-wrap:balance}
+.about p{margin:0 0 16px;max-width:58ch;color:var(--muted)}
+.about p:first-of-type{color:var(--ink);font-size:1.12em}
+
+.inside{padding-block:56px;border-top:1px solid var(--line)}
+.inside-head{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.inside-head h2{max-width:20ch;margin:0}
+.inside-head img{width:100%;max-width:640px;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:6px}
+.index{list-style:none;margin:32px 0 0;padding:0;border-top:2px solid var(--ink)}
+.index li{display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:8px 32px;padding-block:20px;border-bottom:1px solid var(--line)}
+.index .tag{font:500 13px/1.6 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.index h3{font:600 1.25rem/1.25 var(--f-display);margin:0 0 4px}
+.index p{margin:0;color:var(--muted)}
+
+.smallbiz{padding-block:56px;border-top:1px solid var(--line)}
+.bullets{list-style:none;margin:28px 0 0;padding:0;columns:2;column-gap:48px;max-width:860px}
+.bullets li{position:relative;padding:10px 0 10px 28px;break-inside:avoid;border-bottom:1px solid var(--line);font:500 1.1rem/1.4 var(--f-display)}
+.bullets li::before{content:"";position:absolute;left:4px;top:1.05em;width:10px;height:10px;background:var(--accent);border-radius:2px}
+.bullets .bl{all:unset;cursor:pointer;display:block;width:100%;box-sizing:border-box}
+.bullets .bl::after{content:"  \2192  let\2019s schedule a call";color:var(--accent);font:500 .8rem var(--f-mono);opacity:0;transition:opacity .15s}
+.bullets li:hover .bl::after,.bullets .bl:focus-visible::after{opacity:1}
+.bullets .bl:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.smallbiz .lede{max-width:640px;margin:12px 0 16px;color:var(--muted);font-size:1.1rem}
+.banner{margin:40px 0 0;max-width:860px}
+.banner img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line)}
+.meet{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center}
+.meet .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.meet .pair img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px}
+.meet .pair img:last-child{margin-top:24px}
+@media (max-width:760px){.meet{grid-template-columns:1fr}}
+.cta{cursor:pointer;border:0;background:var(--accent);color:#fff;padding:14px 22px;border-radius:6px;font:600 1rem var(--f-display)}
+@media (hover:none){.bullets .bl::after{opacity:1}}
+@media (max-width:640px){.bullets{columns:1}}
+.toolkits{padding-block:56px;border-top:1px solid var(--line)}
+.toolkits .lede{margin:0;color:var(--muted);font-size:1.1rem}
+.kits{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.kits li{background:var(--surface);border:1px solid var(--line);border-radius:6px;font:600 1.2rem/1.25 var(--f-display);display:flex}
+.kits li:hover{border-color:var(--accent)}
+.kits button{appearance:none;border:0;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer;width:100%;padding:20px;min-height:104px;display:flex;flex-direction:column;gap:10px;border-radius:6px}
+.kits li span{font:500 12px/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+@media (max-width:860px){.kits{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.kits{grid-template-columns:minmax(0,1fr)}.kits button{min-height:0}}
+.band{background:var(--band);color:var(--on-band);border-radius:8px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:center;padding:32px;margin-block:24px 56px}
+.band img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:6px}
+.band h2{color:var(--on-band)}
+.band p{color:var(--band-muted);margin:0 0 28px;max-width:46ch}
+
+footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-block:28px 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer .brand{font-size:15px;color:var(--ink)}
+footer .avatar{width:34px;height:34px}
+
+/* Sign-up dialog */
+.overlay{position:fixed;inset:0;background:rgba(10,14,16,.66);display:flex;align-items:center;justify-content:center;padding:20px;z-index:20;overflow-y:auto}
+.dialog{background:var(--surface);color:var(--ink);width:100%;max-width:460px;border-radius:8px;padding:32px;position:relative;box-shadow:0 24px 64px rgba(0,0,0,.4)}
+.dialog h3{font:700 1.7rem/1.1 var(--f-display);margin:0 0 8px}
+.dialog p{margin:0 0 20px;color:var(--muted);font-size:15px}
+.close{position:absolute;top:10px;right:10px;width:40px;height:40px;border:0;background:none;color:var(--muted);font-size:26px;line-height:1;cursor:pointer;border-radius:6px}
+label{display:block;font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;margin:0 0 8px}
+input{width:100%;font:400 17px/1.2 var(--f-body);padding:14px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);margin-bottom:18px}
+input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 30%,transparent)}
+.err{color:var(--accent);font-size:14px;margin:-8px 0 14px;min-height:0}
+.dialog .btn{width:100%;justify-content:center}
+.done{text-align:left}
+.done .photo{width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:50% 22%;margin-bottom:16px;border:2px solid var(--accent)}
+
+@media (max-width:860px){
+  .hero,.about,.band{grid-template-columns:minmax(0,1fr);gap:36px}
+  .hero{padding-block:40px 56px}
+  .portrait{max-width:none}
+  .stamp{left:12px}
+  .band{padding:20px}
+  .index li{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header class="top" id="top">
+    <a class="brand" href="#top"><img class="logo" src="logo.png" alt="" width="40" height="40"><span>The Tax Files</span></a>
+    <button class="status" type="button" data-open>Free guide available <span aria-hidden="true">&rarr;</span></button>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Free guide for business owners</p>
+      <h1>The Tax Files</h1>
+      <p class="sub">I translate confusing tax forms into plain English, helping today&rsquo;s small business owners confidently scale into tomorrow&rsquo;s S Corp or C Corp.</p>
+      <p class="bio"><strong>Hi, I&rsquo;m Mum Monson,</strong> the storyteller and founder behind The Tax Files. I'm a U.S. tax advisor, consultant and strategist, and I turn tax forms and schedules into the heroes of fictional stories so small business owners can understand their taxes and feel peace of mind.</p>
+      <button class="btn" type="button" data-open>Yes, give me the free guide <span aria-hidden="true">&rarr;</span></button>
+    </div>
+    <figure class="portrait mosaic">
+      <img class="m1" src="mix-a.jpg" alt="Mum Monson smiling at her desk during a client consultation" width="900" height="672">
+      <img class="m2" src="mix-pen.jpg" alt="A hand holding a pen, ready to take notes" width="700" height="1245">
+      <img class="m3" src="mix-c.jpg" alt="Mum Monson reviewing tax forms with a small business owner" width="900" height="672">
+      <img class="m4" src="mix-d.jpg" alt="Mum Monson standing with a client folder and pencil" width="900" height="672">
+      </figure>
+  </section>
+
+  <section class="about">
+    <div class="duo">
+      <img src="bw.jpg" alt="Black and white portrait of the author smiling" loading="lazy" width="520" height="693">
+      <img src="planner.jpg" alt="Tax planner with colored tabs, pencils and a business tax form" loading="lazy" width="421" height="632">
+    </div>
+    <div>
+      <h2>Tax forms, turned into heroes</h2>
+      <p>Hi, I&rsquo;m Mum Monson, the storyteller and founder behind The Tax Files.</p>
+      <p>For six years as a U.S. tax advisor and strategist, I searched for a way to make tax literacy stick. My breakthrough came when I traded dry numbers for narrative. What began as a personal struggle sprouted into The Tax Files&mdash;an engaging approach to financial education where IRS codes, schedules, and tax forms are the seeds, and storytelling is what makes them grow.</p>
+      <p>In my world, tax forms are the main characters and true heroes. Through their journeys, my clients finally see how a Schedule C or a Retirement strategy directly impacts their marginal line. Watching my clients&rsquo; curiosity spark with each turning page has been the ultimate reward.</p>
+      <p>I believe our community begins with a story to protect our hard-earned money, and the courage to start your small business. By translating dense IRS frameworks into relatable stories, I help small business owners confidently lower their liabilities and maximize deductions.</p>
+      <p>I grew up translating for my parents and the community by helping them fill out business forms and explaining tax codes and financial statements. This is my story, and I believe our community starts out with a small business owner and later grows into an ecosystem of businesses.</p>
+      <p>And because I continuously refresh my continuing education credits, you can rest assured that your business is always growing on a rock-solid, compliant foundation. Thank you for giving me an opportunity to serve you and your organization.</p>
+      <div class="faces">
+        <img src="icon-a.jpg" alt="The author smiling in a white blouse" loading="lazy" width="64" height="64">
+        <img src="icon-b.jpg" alt="The author in a black and white portrait" loading="lazy" width="64" height="64">
+        <img src="icon-c.jpg" alt="The author laughing, holding a pen" loading="lazy" width="64" height="64">
+      </div>
+    </div>
+  </section>
+
+  <section class="inside">
+    <div class="inside-head">
+      <h2>What is in the guide</h2>
+      <img src="forms-collage.jpg" alt="Form 1040, Form 1099-K and Mum Monson reviewing paperwork with a client" loading="lazy" width="1200" height="677">
+    </div>
+    <ul class="index">
+      <li><span class="tag">Entity basics</span><div><h3>Choosing and understanding your structure</h3><p>How a C corp, S corp and sole proprietorship differ when tax time arrives.</p></div></li>
+      <li><span class="tag">Records</span><div><h3>A year-round filing checklist</h3><p>What to keep, where to keep it and when you will need it.</p></div></li>
+      <li><span class="tag">Deductions</span><div><h3>Common write-offs, in plain English</h3><p>The expenses owners often miss, and the questions to ask before claiming them.</p></div></li>
+      <li><span class="tag">Deadlines</span><div><h3>Dates that matter</h3><p>Estimated payments, filing dates and the calendar prompts that keep you on track.</p></div></li>
+      <li><span class="tag">Your advisor</span><div><h3>Questions to bring to your tax professional</h3><p>Make every meeting shorter, clearer and more useful.</p></div></li>
+    </ul>
+  </section>
+
+  <section class="smallbiz">
+    <div class="meet"><div><h2>Small Business</h2><p class="lede">Not sure how a topic applies to your business? Pick one below and book a free 30-minute consultation with me. We&rsquo;ll walk through your situation in plain English and map out your next steps.</p>
+    <p><button type="button" class="cta" data-open data-call="General consultation">Let&rsquo;s schedule a call &rarr;</button></p></div><div class="pair"><img src="call-a.jpg" alt="Mum Monson smiling in a black blouse" loading="lazy" width="320" height="427"><img src="call-b.jpg" alt="Mum Monson smiling in a white blouse" loading="lazy" width="320" height="427"></div></div>
+    <ul class="bullets">
+      <li><button type="button" class="bl" data-open data-call="1099 NEC">1099 NEC</button></li>
+      <li><button type="button" class="bl" data-open data-call="1099 K">1099 K</button></li>
+      <li><button type="button" class="bl" data-open data-call="Schedule C">Schedule C</button></li>
+      <li><button type="button" class="bl" data-open data-call="Vehicles">Vehicles</button></li>
+      <li><button type="button" class="bl" data-open data-call="Business Expenses">Business Expenses</button></li>
+      <li><button type="button" class="bl" data-open data-call="Self Employment Taxes">Self Employment Taxes</button></li>
+      <li><button type="button" class="bl" data-open data-call="Small Business Retirement (Solo 401k, SIMPLE, SEP IRA)">Small Business Retirement (Solo 401k, SIMPLE, SEP IRA)</button></li>
+      <li><button type="button" class="bl" data-open data-call="1099 R">1099 R</button></li>
+      <li><button type="button" class="bl" data-open data-call="Schedule E">Schedule E</button></li>
+      <li><button type="button" class="bl" data-open data-call="Form 1041 Trusts and Estates">Form 1041 Trusts and Estates</button></li>
+    </ul>
+    <figure class="banner"><img src="title-card.jpg" alt="Small Business: 1099 NEC and SE Taxes, The Tax Files Editorial" loading="lazy" width="1200" height="677"></figure>
+  </section>
+
+  <section class="toolkits">
+    <h2>Toolkits</h2>
+    <p class="lede">Business Loss Tracker Toolkits for:</p>
+    <ul class="kits">
+      <li><button type="button" data-open data-toolkit="Career Coaches"><span>Business Loss Tracker Toolkit</span>Career Coaches</button></li>
+      <li><button type="button" data-open data-toolkit="Small Business Owners"><span>Business Loss Tracker Toolkit</span>Small Business Owners</button></li>
+      <li><button type="button" data-open data-toolkit="Writers"><span>Business Loss Tracker Toolkit</span>Writers</button></li>
+      <li><button type="button" data-open data-toolkit="Video / Podcast"><span>Business Loss Tracker Toolkit</span>Video / Podcast</button></li>
+      <li><button type="button" data-open data-toolkit="AI Consulting"><span>Business Loss Tracker Toolkit</span>AI Consulting</button></li>
+      <li><button type="button" data-open data-toolkit="Landscaping"><span>Business Loss Tracker Toolkit</span>Landscaping</button></li>
+    </ul>
+  </section>
+
+  <section class="band">
+    <img src="team-collage.jpg" alt="Mum Monson meeting with small business clients" loading="lazy" width="1200" height="677">
+    <div>
+      <h2>Ready to feel calmer about tax season?</h2>
+      <p>Get the free guide in your inbox and start reading today.</p>
+      <button class="btn" type="button" data-open>Yes, give me the free guide <span aria-hidden="true">&rarr;</span></button>
+    </div>
+  </section>
+
+  <footer>
+    <a class="brand" href="#top"><img class="logo" src="logo.png" alt="" width="32" height="32"><span>The Tax Files</span></a>
+    <div>&copy; 2026 The Tax Files. All rights reserved.</div>
+  </footer>
+</div>
+
+<div class="overlay" id="overlay" hidden>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dlg-title">
+    <button class="close" type="button" id="close" aria-label="Close">&times;</button>
+    <form id="form" novalidate>
+      <h3 id="dlg-title">Get the free guide</h3>
+      <p id="dlg-sub">Enter your name and email and the guide will be sent to you.</p>
+      <label for="name">First name</label>
+      <input id="name" name="name" autocomplete="given-name" required>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+      <div class="err" id="err" role="alert"></div>
+      <button class="btn" type="submit">Send me the guide</button>
+    </form>
+    <div class="done" id="done" hidden>
+      <img class="photo" src="black.jpg" alt="">
+      <h3>Thank you!</h3>
+      <p id="done-msg">Your free copy of The Tax Files is on the way. Check your inbox and start reading.</p>
+      <button class="btn" type="button" id="ok">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var ENDPOINT='https://script.google.com/macros/s/AKfycbx_QQGrsdYNn1Zcz4HtJ9DTbE4R9mvPKfbbwvacar0zz1uL61eESLs8FbUGePsEm0i9/exec';
+  var overlay=document.getElementById('overlay'),form=document.getElementById('form'),
+      done=document.getElementById('done'),err=document.getElementById('err'),last=null,toolkit='',call='';
+  function open(e){last=e.currentTarget;
+    toolkit=last.getAttribute('data-toolkit')||'';call=last.getAttribute('data-call')||'';
+    var T=document.getElementById('dlg-title'),S=document.getElementById('dlg-sub'),D=document.getElementById('done-msg');
+    if(call){T.textContent="Let\u2019s schedule a call";S.textContent='Free 30-minute consultation'+(call!=='General consultation'?' about '+call:'')+'. Enter your name and email and I will reach out to set a time.';D.textContent='Thank you! I will email you shortly to schedule your free 30-minute consultation.';}
+    else if(toolkit){T.textContent='Get the Business Loss Tracker Toolkit';S.textContent='For '+toolkit+'. Enter your name and email and it will be sent to you.';D.textContent='Your Business Loss Tracker Toolkit for '+toolkit+' is on the way. Check your inbox.';}
+    else{T.textContent='Get the free guide';S.textContent='Enter your name and email and the guide will be sent to you.';D.textContent='Your free copy of The Tax Files is on the way. Check your inbox and start reading.';}
+form.querySelector('button[type="submit"]').textContent=label();overlay.hidden=false;form.hidden=false;done.hidden=true;err.textContent='';
+    setTimeout(function(){document.getElementById('name').focus()},30)}
+  function label(){return call?'Request my free call':(toolkit?'Send me the toolkit':'Send me the guide')}
+  function close(){overlay.hidden=true;if(last)last.focus()}
+  document.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',open)});
+  document.getElementById('close').addEventListener('click',close);
+  document.getElementById('ok').addEventListener('click',close);
+  overlay.addEventListener('mousedown',function(e){if(e.target===overlay)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!overlay.hidden)close()});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=form.name.value.trim(),m=form.email.value.trim();
+    if(!n){err.textContent='Enter your first name.';form.name.focus();return}
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m)){err.textContent='Enter a valid email address, like name@example.com.';form.email.focus();return}
+    err.textContent='';
+    var btn=form.querySelector('button[type="submit"]');
+    btn.disabled=true;btn.textContent='Sending...';
+    fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:new URLSearchParams({name:n,email:m,toolkit:toolkit,call:call})})
+      .then(function(){form.hidden=true;done.hidden=false;form.reset();btn.disabled=false;btn.textContent=label()})
+      .catch(function(){err.textContent='Something went wrong. Check your connection and try again.';btn.disabled=false;btn.textContent=label()});
+  });
+})();
+</script>
+
+</body>
+</html>
