@@ -98,7 +98,7 @@ h2{font:700 clamp(1.8rem,3.6vw,2.7rem)/1.08 var(--f-display);margin:0 0 18px;tex
 .smallbiz .lede{max-width:640px;margin:12px 0 16px;color:var(--muted);font-size:1.1rem}
 .banner{margin:40px 0 0;max-width:860px}
 .banner img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line)}
-.meet{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center}
+.meet{display:block;max-width:640px}
 .meet .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .meet .pair img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px}
 .meet .pair img:last-child{margin-top:24px}
@@ -198,7 +198,6 @@ input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-m
   <section class="inside">
     <div class="inside-head">
       <h2>What is in the guide</h2>
-      <img src="forms-collage.jpg" alt="Form 1040, Form 1099-K and Mum Monson reviewing paperwork with a client" loading="lazy" width="1200" height="677">
     </div>
     <ul class="index">
       <li><span class="tag">Entity basics</span><div><h3>Choosing and understanding your structure</h3><p>How a C corp, S corp and sole proprietorship differ when tax time arrives.</p></div></li>
@@ -211,7 +210,7 @@ input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-m
 
   <section class="smallbiz">
     <div class="meet"><div><h2>Small Business</h2><p class="lede">Not sure how a topic applies to your business? Pick one below and book a free 30-minute consultation with me. We&rsquo;ll walk through your situation in plain English and map out your next steps.</p>
-    <p><button type="button" class="cta" data-open data-call="General consultation">Let&rsquo;s schedule a call &rarr;</button></p></div><div class="pair"><img src="call-a.jpg" alt="Mum Monson smiling in a black blouse" loading="lazy" width="320" height="427"><img src="call-b.jpg" alt="Mum Monson smiling in a white blouse" loading="lazy" width="320" height="427"></div></div>
+    <p><button type="button" class="cta" data-open data-call="General consultation">Let&rsquo;s schedule a call &rarr;</button></p></div></div>
     <ul class="bullets">
       <li><button type="button" class="bl" data-open data-call="1099 NEC">1099 NEC</button></li>
       <li><button type="button" class="bl" data-open data-call="1099 K">1099 K</button></li>
